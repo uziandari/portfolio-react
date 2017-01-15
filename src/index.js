@@ -1,9 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
+import Nav from './components/Nav';
 import './css/main.scss';
 
 ReactDOM.render(
-  <h1>HI</h1>,
+  <Nav />,
   document.getElementById('app')
 )
