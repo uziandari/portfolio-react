@@ -1,10 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { browserHistory } from 'react-router';
 
-import Nav from './components/Nav/index';
-import './css/main.scss';
+import Routes from './routes';
+
+import './css/main';
 
 ReactDOM.render(
-  <Nav />,
+  <Routes history={browserHistory} />,
   document.getElementById('app')
 )

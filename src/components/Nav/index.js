@@ -1,10 +1,7 @@
-import React, { Component } from 'react'; 
-import { Router, Route, browserHistory } from 'react-router'
+import React, { Component } from 'react';
+import { Link } from 'react-router';
 
-import Home from '../Home/index'
-import About from '../About/index'
-
-import './style.scss';
+import './style';
 
 export default class Nav extends Component {
 
@@ -17,73 +14,77 @@ export default class Nav extends Component {
   }
 
   handleResize() {
-    this.setState({
-      windowWidth: window.innerWidth
-    });
+    this.setState({windowWidth: window.innerWidth});
   }
 
   componentDidMount() {
     window.addEventListener('resize', this.handleResize.bind(this));
-  }  
-  
+  }
+
   componentWillUnmount() {
-    window.addEventListener('resize', this.handleResize.bind(this));
+    window.removeEventListener('resize', this.handleResize.bind(this));
+  }
+
+  navLinks() {
+    return [
+      <ul key={9} className="nav">
+        <li key={1} className="link-item">
+          <Link to="/about">About</Link>
+        </li>
+        <li key={2} className="link-item">
+          <Link to="/projects">Projects</Link>
+        </li>
+        <li key={3} className="link-item">
+          <Link to="/">SteveM</Link>
+        </li>
+        <li key={4} className="link-item">
+          <Link to="/blog">Words</Link>
+        </li>
+        <li key={5} className="link-item">
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+    ];
   }
 
   renderMobileNav() {
     if(this.state.mobileNavVisible) {
-      return this.navigationLinks();
+      return this.navLinks();
     }
   }
 
   handleNavClick() {
     if(!this.state.mobileNavVisible) {
-      this.setState({
-        mobileNavVisible: true
-      });
-    } else {
-      this.setState({
-        mobileNavVisible: false
-      });
+      this.setState({mobileNavVisible: true});
+    }
+    else {
+      this.setState({mobileNavVisible: false});
     }
   }
 
-  renderNavigation() {
-    if(this.state.windowWidth <= 900) {
+  renderNav() {
+    if(this.state.windowWidth <= 1080) {
       return [
-        <div key={9} className="mobile-nav">
-          <p onClick={this.handleNavClick.bind(this)}><i className="material-icons">view_headline</i></p>
+        <div className="mobile-nav">
+          <p onClick={this.handleNavClick.bind(this)}><i className="icons">...</i></p>
           {this.renderMobileNav()}
         </div>
       ];
-    } else {
+    }
+    else {
       return [
         <div key={7} className="nav-menu">
-          {this.navigationLinks()}
+          {this.navLinks()}
         </div>
       ];
     }
   }
 
-  navigationLinks() {
-    return [
-      <Router history={browserHistory}>
-        <Route path="/" component={Home} />
-        <Route path="/about" component={About} />
-      </Router>
-    ];
-  }  
-
-  
   render() {
-
     return (
-      <div className="nav-container">
-        <div className="steve-portfolio">
-          {this.renderNavigation()}
-        </div>
+      <div className="nav-wrapper">
+        {this.renderNav()}
       </div>
     );
   }
-
-} 
+}

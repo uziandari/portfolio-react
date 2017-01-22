@@ -4,7 +4,12 @@ module.exports = {
   ],
   output: {
     path: __dirname + '/dist',
-    filename: 'bundle.js'
+    filename: 'bundle.js',
+    publicPath: '/'
+  },
+  devServer: {
+    contentBase: "./dist",
+    hot: true
   },
   resolve: {
     modulesDirectories: ['node_modules', 'src'],
