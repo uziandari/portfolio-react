@@ -10,7 +10,9 @@ export default class Home extends Component {
     return (
       <div>
         <Nav />
-        <h1>Home</h1>
+        <div id="home-wrapper">
+          <h1>Home</h1>
+        </div>
       </div>
     );
   }

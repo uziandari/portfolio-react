@@ -27,21 +27,21 @@ export default class Nav extends Component {
 
   navLinks() {
     return [
-      <ul key={9} className="nav">
-        <li key={1} className="link-item">
-          <Link to="/about">About</Link>
+      <ul key={9}>
+        <li key={1}>
+          <Link to="/about"><i className="nav-item fa fa-user-circle"></i></Link>
         </li>
-        <li key={2} className="link-item">
-          <Link to="/projects">Projects</Link>
+        <li key={2}>
+          <Link to="/projects"><i className="nav-item fa fa-laptop"></i></Link>
         </li>
-        <li key={3} className="link-item">
-          <Link to="/">SteveM</Link>
+        <li key={3}>
+          <Link to="/"><i className="nav-item fa fa-home"></i></Link>
         </li>
-        <li key={4} className="link-item">
-          <Link to="/blog">Words</Link>
+        <li key={4}>
+          <Link to="/blog"><i className="nav-item fa fa-pencil"></i></Link>
         </li>
-        <li key={5} className="link-item">
-          <Link to="/contact">Contact</Link>
+        <li key={5}>
+          <Link to="/contact"><i className="nav-item fa fa-commenting"></i></Link>
         </li>
       </ul>
     ];
@@ -63,26 +63,26 @@ export default class Nav extends Component {
   }
 
   renderNav() {
-    if(this.state.windowWidth <= 1080) {
-      return [
+    if(this.state.windowWidth <= 900) {
+      return (
         <div className="mobile-nav">
           <p onClick={this.handleNavClick.bind(this)}><i className="icons">...</i></p>
           {this.renderMobileNav()}
         </div>
-      ];
+      );
     }
     else {
-      return [
-        <div key={7} className="nav-menu">
+      return (
+        <nav>
           {this.navLinks()}
-        </div>
-      ];
+        </nav>
+      );
     }
   }
 
   render() {
     return (
-      <div className="nav-wrapper">
+      <div className="vertical-nav">
         {this.renderNav()}
       </div>
     );
