@@ -47,9 +47,31 @@ export default class Nav extends Component {
     ];
   }
 
+  mobileNavLinks() {
+    return [
+      <ul key={9}>
+        <li key={1}>
+          <Link to="/"><i className="nav-item fa fa-home">  Home</i></Link>
+        </li>
+        <li key={2}>
+          <Link to="/about"><i className="nav-item fa fa-user-circle">  About</i></Link>
+        </li>
+        <li key={3}>
+          <Link to="/projects"><i className="nav-item fa fa-laptop">  Projects</i></Link>
+        </li>
+        <li key={4}>
+          <Link to="/blog"><i className="nav-item fa fa-pencil">  Blog</i></Link>
+        </li>
+        <li key={5}>
+          <Link to="/contact"><i className="nav-item fa fa-commenting">  Contact</i></Link>
+        </li>
+      </ul>
+    ];
+  }
+
   renderMobileNav() {
     if(this.state.mobileNavVisible) {
-      return this.navLinks();
+      return this.mobileNavLinks();
     }
   }
 

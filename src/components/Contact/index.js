@@ -8,9 +8,11 @@ export default class Contact extends Component {
 
   render() {
     return (
-      <div id="contact-wrapper">
+      <div>
         <Nav />
-        <h1>Contact</h1>
+        <div id="contact-wrapper">
+          <h1>Contact</h1>
+        </div>
       </div>
     );
   }
