@@ -8,9 +8,11 @@ export default class About extends Component {
 
   render() {
     return (
-      <div id="about-wrapper">
+      <div>
         <Nav />
-        <h1>About</h1>
+        <div id="about-wrapper">
+          <h1>About</h1>
+        </div>
       </div>
     );
   }

@@ -8,9 +8,11 @@ export default class NotFound extends Component {
 
   render() {
     return (
-      <div id="notfound-wrapper">
+      <div>
         <Nav />
-        <h1>Not Found</h1>
+        <div id="notfound-wrapper">
+          <h1>NotFound</h1>
+        </div>
       </div>
     );
   }

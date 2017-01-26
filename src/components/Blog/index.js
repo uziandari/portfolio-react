@@ -8,9 +8,11 @@ export default class Blog extends Component {
 
   render() {
     return (
-      <div id="blog-wrapper">
+      <div>
         <Nav />
-        <h1>Blog</h1>
+        <div id="blog-wrapper">
+          <h1>Blog</h1>
+        </div>
       </div>
     );
   }
