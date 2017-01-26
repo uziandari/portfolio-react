@@ -5,7 +5,7 @@ import Home from './components/Home/index';
 import About from './components/About/index';
 import Contact from './components/Contact/index';
 import Blog from './components/Blog/index';
-import Projects from './components/Projects/index';
+import Projects from './components/Works/index';
 import NotFound from './components/NotFound/index';
 
 const Routes = (props) => (
