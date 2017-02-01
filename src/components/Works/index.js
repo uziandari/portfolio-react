@@ -48,9 +48,7 @@ export default class Works extends Component {
       <div>
         <Nav />
         <div id="works-wrapper">
-          <section id="projects-grid">
-            <Project projects={this.state.projects} />
-          </section>
+          <Project projects={this.state.projects} />
         </div>
       </div>
     );

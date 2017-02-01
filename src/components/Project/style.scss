@@ -1,7 +1,15 @@
 @media (min-width: 900px) {
-  .col {
-    flex: 1;
-    margin: 2em;
+  
+  #projects-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .col {
+      flex: 1;
+      margin: 2em;
+    }
+
   }
   
 }
