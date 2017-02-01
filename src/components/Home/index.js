@@ -22,8 +22,6 @@ export default class Home extends Component {
               <h3>Sub Content 2</h3>
             </div>
           </section>
-          <h1>Hi.</h1>
-          <h3>I'm Steve</h3>
         </div>
       </div>
     );
