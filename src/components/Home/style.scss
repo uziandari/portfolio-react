@@ -1,3 +1,45 @@
-#home-wrapper {
-  margin-left: 80px;
+@media (min-width: 900px) {
+  #home-wrapper {
+    margin-left: 80px;
+    max-width: 1200px;
+  }
+
+  #home-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .col {
+      flex: 1;
+      margin: 20px;
+    
+      h1 {
+        color: #fff;
+        font-family: 'Space Mono', monospace;
+        font-weight: 700;
+        font-size: 6rem;
+        text-align: center;
+      }
+    }
+  }
+
+  #home-grid {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .col {
+      flex: 1;
+      margin: 10px;
+      border: 1px solid black;
+
+      h3 {
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+        justify-content: center;
+        text-align: center;
+        font-size: 2em;
+      }
+    }
+  }
 }

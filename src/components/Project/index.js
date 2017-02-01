@@ -6,7 +6,7 @@ export default class Project extends Component {
 
   render() {
     var projectsNode = this.props.projects.map((project) => 
-      <div key={project.id}>
+      <div key={project.id} className="col">
         <h3>{project.name}</h3>
         <p>{project.desc}</p>
         <h3>{project.img}</h3>
