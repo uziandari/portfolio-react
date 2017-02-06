@@ -1,7 +1,6 @@
 @media (min-width: 900px) {
   #home-wrapper {
     margin-left: 80px;
-    background-color: #4580e0;
     height: 100vh;
 
     #home-title {
@@ -14,7 +13,7 @@
         margin: 20px;
       
         h1 {
-          color: #fff;
+          color: #000;
           font-family: 'Space Mono', monospace;
           font-weight: 700;
           font-size: 6rem;
@@ -34,7 +33,7 @@
         border: 1px solid black;
 
         h3 {
-          color: #fff;
+          color: #000;
           font-family: 'Roboto', sans-serif;
           justify-content: center;
           text-align: center;

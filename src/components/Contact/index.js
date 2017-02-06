@@ -19,7 +19,7 @@ export default class Contact extends Component {
           </form>
         </div>
       </div>
-    )
+    );
   }
 
 
